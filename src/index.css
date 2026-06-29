@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Exo 2", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-cyber-bg: #0D1117;
+  --color-cyber-orange: #FF4B00;
+  --color-cyber-orange-glow: #ff6a33;
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-bg text-white overflow-hidden antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+@layer utilities {
+  .glow-orange {
+    text-shadow: 0 0 10px rgba(255, 75, 0, 0.5), 0 0 20px rgba(255, 106, 51, 0.3);
+  }
+  .bg-glow-orange {
+    box-shadow: 0 0 15px rgba(255, 75, 0, 0.4), 0 0 30px rgba(255, 106, 51, 0.2);
+  }
+  .hologram-flicker {
+    animation: hologram-flicker 2s infinite ease-in-out;
+  }
+  
+  /* Custom Cyber-Scrollbar */
+  .cyber-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .cyber-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 75, 0, 0.05);
+    border-radius: 10px;
+  }
+  .cyber-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 75, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 75, 0, 0.1);
+  }
+  .cyber-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 75, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 75, 0, 0.3);
+  }
+}
+
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 0.8; transform: skewX(0deg); }
+  5% { opacity: 0.6; transform: skewX(1deg); }
+  10% { opacity: 0.9; transform: skewX(-1deg); }
+  15% { opacity: 0.5; transform: skewX(0.5deg); }
+  20% { opacity: 0.8; transform: skewX(0deg); }
+}
