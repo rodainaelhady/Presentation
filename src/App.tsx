@@ -37,6 +37,10 @@ import { DefensDataFoundationSlide } from './components/DefensDataFoundationSlid
 import { DefensModelArchitectureSlide } from './components/DefensModelArchitectureSlide';
 import { DefensThreePhaseTrainingSlide } from './components/DefensThreePhaseTrainingSlide';
 import { DefensResultsLimitationsSlide } from './components/DefensResultsLimitationsSlide';
+import { WhyMentalHealthAISlide } from './components/WhyMentalHealthAISlide';
+import { MeetAlbertSlide } from './components/MeetAlbertSlide';
+import { DefensInActionSlide } from './components/DefensInActionSlide';
+import { AlbertArchitectureSlide } from './components/AlbertArchitectureSlide';
 import { cn } from './lib/utils';
 
 type SceneState = 'idle' | 'scanning' | 'breach' | 'reveal' | 'presentation';
@@ -330,6 +334,30 @@ export default function App() {
             <DefensResultsLimitationsSlide 
               key="slide33"
               onPrev={() => setSlideIndex(32)}
+              onNext={() => setSlideIndex(34)} 
+            />
+          ) : slideIndex === 34 ? (
+            <WhyMentalHealthAISlide 
+              key="slide34"
+              onPrev={() => setSlideIndex(33)}
+              onNext={() => setSlideIndex(35)} 
+            />
+          ) : slideIndex === 35 ? (
+            <MeetAlbertSlide 
+              key="slide35"
+              onPrev={() => setSlideIndex(34)}
+              onNext={() => setSlideIndex(36)} 
+            />
+          ) : slideIndex === 36 ? (
+            <DefensInActionSlide 
+              key="slide36"
+              onPrev={() => setSlideIndex(35)}
+              onNext={() => setSlideIndex(37)} 
+            />
+          ) : slideIndex === 37 ? (
+            <AlbertArchitectureSlide 
+              key="slide37"
+              onPrev={() => setSlideIndex(36)}
               onNext={() => setSlideIndex(0)} 
             />
           ) : (

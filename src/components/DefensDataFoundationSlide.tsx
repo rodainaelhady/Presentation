@@ -29,7 +29,7 @@ export function DefensDataFoundationSlide({ onNext, onPrev }: SlideProps) {
       {/* Header Bar */}
       <div className="flex justify-between items-center border-b border-cyber-orange/15 pb-2.5 mb-2 shrink-0 relative z-30">
         <div className="font-mono text-[10px] tracking-[0.4em] text-cyber-orange/50">
-          SLIDE 31 // 34
+          SLIDE 31 // 38
         </div>
         <div className="font-display text-[10px] tracking-[0.4em] opacity-30 uppercase">
           QuantAI-Guard
@@ -189,7 +189,7 @@ export function DefensDataFoundationSlide({ onNext, onPrev }: SlideProps) {
         <div className="flex items-center gap-4">
           <div className="w-1 h-1 rounded-full bg-cyber-orange/20" />
           <div className="px-3 py-1 border border-cyber-orange/20 text-cyber-orange font-mono text-[10px] tracking-widest">
-            31 // 34
+            31 // 38
           </div>
           <div className="w-1 h-1 rounded-full bg-cyber-orange/20" />
         </div>
